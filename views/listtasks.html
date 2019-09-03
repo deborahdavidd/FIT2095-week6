@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        table,th,td {
+            border: 1px solid black;   
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Task Name</th>
+            <th>Due Date</th>
+            <th>Description</th>
+            <th>Assigned To</th>
+            <th>Status</th>
+        </tr>
+         
+        <% for(var i=0; i <database.length;i++){ %>
+            <tr>
+                <td>
+                    <%= database[i].taskid %>
+                </td>
+                <td>
+                    <%= database[i].name %>
+                </td>
+                <td>
+                    <%= database[i].duedate %>
+                </td>
+                <td>
+                    <%= database[i].desc %>
+                </td>
+                <td>
+                    <%= database[i].assignedto %>
+                </td>
+                <td>
+                    <%= database[i].status %>
+                </td>
+                    
+            </tr>
+            <% }%>
+
+    </table>
+
+    <a href="/addTask"> Add New Task</a>
+    <a href="/"> Home</a>
+</body>
